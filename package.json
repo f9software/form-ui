@@ -1,8 +1,8 @@
 {
   "name": "@f9software/form-ui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "tsc": "./node_modules/.bin/tsc -p ./tsconfig.json",
     "test": "echo \"Error: no test specified\" && exit 1"
