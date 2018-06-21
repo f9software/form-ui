@@ -13,7 +13,6 @@ export interface FieldProps {
 export class Field extends React.Component<FieldProps> {
     constructor(props: FieldProps) {
         super(props);
-
         this.onChange = this.onChange.bind(this);
     }
 
@@ -25,10 +24,10 @@ export class Field extends React.Component<FieldProps> {
         const props = this.props;
 
         return (
-            <div className="form-group">
+            <div className="form-group mb-5">
                 <label htmlFor={props.id}>{props.label}</label>
-                <input type="text" name={props.name} id={props.id} placeholder={props.placeholder} onChange={this.onChange} value={props.value} />
-                {props.description ? <p className="text-muted">{props.description}</p> : null}
+                <input type="text" name={props.name} id={props.id} placeholder={props.placeholder} onChange={this.onChange} value={props.value} className="form-control" />
+                {props.description ? <p className="form-text text-muted">{props.description}</p> : null}
             </div>
         );
     }
