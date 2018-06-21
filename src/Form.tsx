@@ -8,6 +8,7 @@ export interface FormProps {
     description: string;
     fields: FieldProps[];
     data: {[key: string]: any};
+    onSubmit: (e: React.FormEvent) => void
 }
 
 export class Form extends React.Component<FormProps> {
@@ -17,7 +18,7 @@ export class Form extends React.Component<FormProps> {
         const data = props.data;
 
         return (
-            <form action={props.action} method={props.method}>
+            <form action={props.action} method={props.method} onSubmit={props.onSubmit}>
                 <h2>{props.title}</h2>
                 {props.description ? <p>{props.description}</p> : null}
                 {fields.map(field => <Field {...field} value={data[field.name]} />)}
